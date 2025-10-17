@@ -141,14 +141,4 @@ class ExternalPercentageServiceTest {
         verify(restTemplate, times(1)).getForObject(eq(TEST_URL), eq(Map.class));
     }
 
-    // ELIMINA ESTOS DOS TESTS PROBLEMÁTICOS TEMPORALMENTE
-    // @Test
-    // void testGetPercentage_CacheBehavior() {
-    //     // Este test requiere configuración más compleja de Spring Context
-    // }
-    //
-    // @Test
-    // void testGetPercentage_FallbackAfterSuccess() {
-    //     // Este test también requiere Spring Context completo
-    // }
 }

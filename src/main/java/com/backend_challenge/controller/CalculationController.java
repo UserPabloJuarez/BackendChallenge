@@ -27,7 +27,6 @@ public class CalculationController {
             @RequestParam Double num1,
             @RequestParam Double num2) {
 
-        // ... código existente sin cambios ...
         CalculationService.CalculationResult result = calculationService.calculateWithPercentage(num1, num2);
 
         // Guardar historial de forma asíncrona
@@ -58,7 +57,6 @@ public class CalculationController {
         ));
     }
 
-    // ENDPOINT ACTUAL - MANTENER para compatibilidad
     @GetMapping("/history")
     public ResponseEntity<?> getHistory() {
         try {
@@ -76,7 +74,7 @@ public class CalculationController {
         }
     }
 
-    // NUEVO ENDPOINT CON PAGINACIÓN
+    //ENDPOINT CON PAGINACIÓN
     @GetMapping("/history/paged")
     public ResponseEntity<?> getHistoryPaged(
             @RequestParam(defaultValue = "0") int page,

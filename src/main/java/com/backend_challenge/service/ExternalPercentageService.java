@@ -9,7 +9,6 @@ import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
-import java.util.Random;
 
 @Service
 public class ExternalPercentageService {
@@ -36,7 +35,7 @@ public class ExternalPercentageService {
                 Object percentageObj = response.get("percentage");
                 if (percentageObj instanceof Number) {
                     Double percentage = ((Number) percentageObj).doubleValue();
-                    lastSuccessfulPercentage = percentage; // Guardar último valor exitoso
+                    lastSuccessfulPercentage = percentage; // Guarda el último valor exitoso
                     return percentage;
                 }
             }
